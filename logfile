@@ -1,0 +1,30 @@
+2021-05-12 00:16:48.300 BST [57439] LOG:  starting PostgreSQL 13.2 on x86_64-apple-darwin20.3.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2021-05-12 00:16:48.302 BST [57439] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-05-12 00:16:48.303 BST [57439] LOG:  listening on IPv6 address "::1", port 5432
+2021-05-12 00:16:48.304 BST [57439] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-05-12 00:16:48.318 BST [57440] LOG:  database system was shut down at 2021-05-12 00:13:52 BST
+2021-05-12 00:16:48.329 BST [57439] LOG:  database system is ready to accept connections
+2021-05-12 10:54:57.899 BST [12105] FATAL:  role "table_booker_user" does not exist
+2021-05-12 11:01:20.035 BST [12743] FATAL:  database "collins" does not exist
+2021-05-12 11:18:14.263 BST [14634] FATAL:  role "postgres" does not exist
+2021-05-12 11:20:14.804 BST [14846] FATAL:  database "collins" does not exist
+2021-05-12 11:30:04.078 BST [15956] FATAL:  database "collins" does not exist
+2021-05-12 11:52:22.179 BST [18414] FATAL:  database "collins" does not exist
+2021-05-12 11:52:25.778 BST [18424] ERROR:  role "postgres" already exists
+2021-05-12 11:52:25.778 BST [18424] STATEMENT:  CREATE ROLE postgres SUPERUSER CREATEDB CREATEROLE INHERIT LOGIN;
+2021-05-12 11:52:40.606 BST [18520] FATAL:  database "collins" does not exist
+2021-05-12 12:03:52.468 BST [19804] ERROR:  role "postgres" already exists
+2021-05-12 12:03:52.468 BST [19804] STATEMENT:  CREATE ROLE postgres SUPERUSER CREATEDB CREATEROLE INHERIT LOGIN;
+2021-05-12 12:04:10.414 BST [19840] FATAL:  database "collins" does not exist
+2021-05-12 12:05:11.964 BST [19955] FATAL:  database "collins" does not exist
+2021-05-12 13:09:12.733 BST [24428] FATAL:  database "collins" does not exist
+2021-05-12 13:26:23.926 BST [24800] ERROR:  syntax error at or near "CREATE" at character 74
+2021-05-12 13:26:23.926 BST [24800] STATEMENT:  CREATE USER table_booker_user WITH ENCRYPTED PASSWORD 'r4$AMGexn9a#4mJd'
+	CREATE USER table_booker_user WITH ENCRYPTED PASSWORD 'r4$AMGexn9a#4mJd';
+2021-05-12 13:27:44.027 BST [24800] ERROR:  syntax error at or near "CREATE" at character 74
+2021-05-12 13:27:44.027 BST [24800] STATEMENT:  CREATE USER table_booker_user WITH ENCRYPTED PASSWORD 'r4$AMGexn9a#4mJd'
+	CREATE USER table_booker_user WITH ENCRYPTED PASSWORD 'r4$AMGexn9a#4mJd';
+2021-05-12 13:28:12.129 BST [24800] ERROR:  syntax error at or near "#" at character 1
+2021-05-12 13:28:12.129 BST [24800] STATEMENT:  # CREATE USER table_booker_user WITH ENCRYPTED PASSWORD 'r4$AMGexn9a#4mJd';
+2021-05-12 13:29:37.492 BST [26611] ERROR:  database "table_booker_db" already exists
+2021-05-12 13:29:37.492 BST [26611] STATEMENT:  CREATE DATABASE table_booker_db;

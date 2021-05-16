@@ -3,7 +3,7 @@ from .models import Booking, BusinessHour, Restaurant, Setting, Table
 
 class BusinessHourInline(admin.TabularInline):
     model = BusinessHour
-    extra = 4
+    extra = 7
     show_change_link = True
 
 

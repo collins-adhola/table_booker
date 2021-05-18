@@ -1,6 +1,9 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
+from django.utils import timezone
+from .models import Booking
 
 
 class UserForm(UserCreationForm):
@@ -25,3 +28,24 @@ class UserForm(UserCreationForm):
         if commit:
             user.save()
         return user
+
+class BookingForm(forms.ModelForm):
+    class Meta:
+        model = Booking
+        fields = (
+            "table",
+            "date"
+        )
+
+    def clean(self):
+      cleaned_data = super().clean()
+      date = cleaned_data.get("date")
+
+      if date < timezone.now():
+        raise ValidationError("Date cannot be in the past")
+
+        
+
+
+        
+        

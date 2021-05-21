@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.utils import timezone
+
 from .models import Booking
 
 
@@ -29,23 +30,24 @@ class UserForm(UserCreationForm):
             user.save()
         return user
 
+
 class BookingForm(forms.ModelForm):
+    date = forms.DateTimeField(
+        input_formats=["%Y-%m-%dT%H:%M"],
+        widget=forms.DateTimeInput(
+            attrs={"type": "datetime-local", "class": "form-control"},
+            format="%Y-%m-%dT%H:%M",
+        ),
+    )
+
     class Meta:
         model = Booking
-        fields = (
-            "table",
-            "date"
-        )
+        fields = ("table", "date")
 
     def clean(self):
-      cleaned_data = super().clean()
-      date = cleaned_data.get("date")
+        cleaned_data = super().clean()
+        date = cleaned_data.get("date")
 
-      if date < timezone.now():
-        raise ValidationError("Date cannot be in the past")
+        if date < timezone.now():
+            raise ValidationError("Date cannot be in the past")
 
-        
-
-
-        
-        

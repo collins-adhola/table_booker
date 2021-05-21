@@ -28,3 +28,4 @@
 2021-05-12 13:28:12.129 BST [24800] STATEMENT:  # CREATE USER table_booker_user WITH ENCRYPTED PASSWORD 'r4$AMGexn9a#4mJd';
 2021-05-12 13:29:37.492 BST [26611] ERROR:  database "table_booker_db" already exists
 2021-05-12 13:29:37.492 BST [26611] STATEMENT:  CREATE DATABASE table_booker_db;
+2021-05-21 12:56:43.712 BST [57445] LOG:  stats_timestamp 2021-05-21 12:56:43.9825+01 is later than collector's time 2021-05-21 12:56:43.701953+01 for database 0

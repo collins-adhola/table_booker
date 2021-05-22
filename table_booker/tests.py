@@ -135,3 +135,63 @@ class TestLogout(TestCase):
         self.assertEqual(message.tags, "info")
         self.assertEqual(message.message, "You have successfully logged out.")
         self.assertRedirects(self.response, "/login", status_code=302)        
+
+class TestBookingRestaurant(TestCase):
+    def setUp(self):
+        self.user = UserFactory()
+        self.restaurant = RestaurantFactory()
+        self.table = TableFactory(restaurant=self.restaurant)
+        self.url = f"/book-restaurant/{self.restaurant.id}"
+
+    def test_authentication(self):
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, 302)
+
+    def test_invalid_restaurant_id(self):
+        self.client.force_login(self.user)
+        url = "/book-restaurant/99999"
+
+        response = self.client.get(url, follow=True)
+        message = list(response.context.get("messages"))[0]
+
+        self.assertEqual(message.tags, "error")
+        self.assertTrue("Invalid restaurant supplied" in message.message)
+        self.assertRedirects(response, "/", status_code=302)
+
+    def test_get_blank_form(self):
+        self.client.force_login(self.user)
+        response = self.client.get(self.url, follow=True)
+        context_form = response.context["booking_form"]
+
+        self.assertTemplateUsed(response, "book_restaurant.html")
+        self.assertIsInstance(context_form, BookingForm)
+
+    def test_successful_post(self):
+        self.client.force_login(self.user)
+        data = {
+            "user": self.user,
+            "restaurant": self.restaurant.id,
+            "table": self.restaurant.tables.first().id,
+            "date": (datetime.datetime.today() + datetime.timedelta(days=3)).strftime(
+                "%Y-%m-%dT%H:%M"
+            ),
+        }
+        response = self.client.post(self.url, data, follow=True)
+        message = list(response.context.get("messages"))[0]
+        self.assertEqual(message.tags, "info")
+        self.assertTrue(f"You successfully booked {self.restaurant}" in message.message)
+        self.assertRedirects(response, "/", status_code=302)
+
+    # def test_unsuccessful_post(self):
+    #     self.client.force_login(self.user)
+
+    #     data = {"user": "", "restaurant": "", "table": "", "date": ""}
+
+    #     response = self.client.post(self.url, data, follow=True)
+    #     booking_form = response.context["booking_form"]
+    #     # booking_form.errors
+    #     self.assertEqual(response.status_code, 200)  # no redirect
+    #     self.assertEqual(booking_form.is_valid(), False)
+
+    # def test_booking_past_date(self):
+    #     pass

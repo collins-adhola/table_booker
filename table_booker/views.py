@@ -40,7 +40,7 @@ def book_restaurant(request, restaurant_id):
             messages.info(request, f"You successfully booked {restaurant}")
             return redirect("table_booker:home")
     else:
-        form = BookingForm
+        form = BookingForm()
 
     return render(
         request=request,
@@ -49,7 +49,7 @@ def book_restaurant(request, restaurant_id):
     )
   
     
-    form = BookingForm
+    form = BookingForm()
     return render(
         request=request,
         template_name="book_restaurant.html",

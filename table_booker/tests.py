@@ -8,7 +8,7 @@ from django.core.exceptions import ValidationError
 from django.test import TestCase
 
 from .factories import RestaurantFactory, TableFactory, UserFactory
-from .forms import BookingForm
+from .forms import BookingForm, UserForm
 from .models import Restaurant
 
 
@@ -80,3 +80,46 @@ class TestLoginPage(TestCase):
 
 
 
+
+class TestSignUpPage(TestCase):
+    def setUp(self):
+        self.url = "/signup"
+        self.response = self.client.get(self.url)
+
+    def test_blank_signup_form(self):
+        context_form = self.response.context["register_form"]
+        self.assertEqual(self.response.status_code, 200)
+        self.assertIsInstance(context_form, UserForm)
+        self.assertTemplateUsed(self.response, "signup.html")
+
+    def test_successful_signup(self):
+        data = {
+            "first_name": "Cheikh",
+            "last_name": "Anta Diop",
+            "username": "cheikh",
+            "email": "cheikh@email.com",
+            "password1": "top-secret",
+            "password2": "top-secret",
+        }
+        response = self.client.post(self.url, data, follow=True)
+
+        message = list(response.context.get("messages"))[0]
+        self.assertEqual(message.tags, "success")
+        self.assertTrue(f"Registration successful." in message.message)
+        self.assertRedirects(response, "/", status_code=302)
+
+    def test_unsuccessful_signup(self):
+        data = {
+            "first_name": "",
+            "last_name": "",
+            "username": "",
+            "email": "",
+            "password1": "",
+            "password2": "",
+        }
+        response = self.client.post(self.url, data, follow=True)
+        message = list(response.context.get("messages"))[0]
+        self.assertEqual(message.tags, "error")
+        self.assertTrue(
+            "Unsuccessful registration. Invalid information." in message.message
+        )

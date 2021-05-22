@@ -29,3 +29,7 @@
 2021-05-12 13:29:37.492 BST [26611] ERROR:  database "table_booker_db" already exists
 2021-05-12 13:29:37.492 BST [26611] STATEMENT:  CREATE DATABASE table_booker_db;
 2021-05-21 12:56:43.712 BST [57445] LOG:  stats_timestamp 2021-05-21 12:56:43.9825+01 is later than collector's time 2021-05-21 12:56:43.701953+01 for database 0
+2021-05-22 21:27:36.225 BST [42421] ERROR:  permission denied to create database
+2021-05-22 21:27:36.225 BST [42421] STATEMENT:  CREATE DATABASE "test_table_booker_db" 
+2021-05-22 21:29:02.910 BST [42549] ERROR:  permission denied to create database
+2021-05-22 21:29:02.910 BST [42549] STATEMENT:  CREATE DATABASE "test_table_booker_db" 

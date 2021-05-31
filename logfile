@@ -53,3 +53,8 @@
 2021-05-23 00:14:19.809 BST [59729] FATAL:  database "test_table_booker_db" does not exist
 2021-05-23 00:22:43.499 BST [60643] FATAL:  database "test_table_booker_db" does not exist
 2021-05-23 00:31:19.244 BST [61422] FATAL:  database "test_table_booker_db" does not exist
+2021-05-31 13:42:13.592 BST [3839] FATAL:  database "test_table_booker_db" does not exist
+2021-05-31 14:22:19.603 BST [7723] FATAL:  database "test_table_booker_db" does not exist
+2021-05-31 15:13:10.493 BST [10213] FATAL:  database "test_table_booker_db" does not exist
+2021-05-31 15:14:39.848 BST [10420] FATAL:  database "test_table_booker_db" does not exist
+2021-05-31 15:19:57.171 BST [10885] FATAL:  database "test_table_booker_db" does not exist

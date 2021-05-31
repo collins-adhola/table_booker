@@ -9,7 +9,7 @@ from django.test import TestCase
 
 from .factories import RestaurantFactory, TableFactory, UserFactory
 from .forms import BookingForm, UserForm
-from .models import Restaurant
+from .models import Restaurant, Table
 
 
 class HomePageTests(TestCase):
@@ -21,8 +21,6 @@ class HomePageTests(TestCase):
         response = self.client.get("/")
         self.assertEqual(response.status_code, 302)
 
-    
-
     def test_context_data(self):
         self.client.force_login(self.user)
         response = self.client.get("/")
@@ -33,9 +31,6 @@ class HomePageTests(TestCase):
     def test_template_rendered(self):
         self.client.force_login(self.user)
         response = self.client.get("/")
-
-      
-
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "home.html")    
     
@@ -77,8 +72,6 @@ class TestLoginPage(TestCase):
         message = list(response.context.get("messages"))[0]
         self.assertEqual(message.tags, "error")
         self.assertTrue("Invalid username or password." in message.message)
-
-
 
 
 class TestSignUpPage(TestCase):
@@ -124,6 +117,7 @@ class TestSignUpPage(TestCase):
             "Unsuccessful registration. Invalid information." in message.message
         )
 
+
 class TestLogout(TestCase):
     def setUp(self):
         self.url = "/logout"
@@ -136,7 +130,9 @@ class TestLogout(TestCase):
         self.assertEqual(message.message, "You have successfully logged out.")
         self.assertRedirects(self.response, "/login", status_code=302)        
 
+
 class TestBookingRestaurant(TestCase):
+
     def setUp(self):
         self.user = UserFactory()
         self.restaurant = RestaurantFactory()
@@ -181,6 +177,20 @@ class TestBookingRestaurant(TestCase):
         self.assertEqual(message.tags, "info")
         self.assertTrue(f"You successfully booked {self.restaurant}" in message.message)
         self.assertRedirects(response, "/", status_code=302)
+
+    def test_table_queryset(self):
+        TableFactory()
+
+        self.client.force_login(self.user)
+        response = self.client.get(self.url, follow=True)
+        context_form = response.context["booking_form"]
+
+        current_queryset = context_form.fields["table"].queryset
+        expected_queryset = Table.objects.filter(restaurant_id=self.restaurant.id)
+
+        self.assertEqual(list(current_queryset), list(expected_queryset))
+
+
 
     # def test_unsuccessful_post(self):
     #     self.client.force_login(self.user)

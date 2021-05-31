@@ -15,7 +15,6 @@ def home_page(request):
     return render(request, "home.html", context=context)
 
 
-
 def book_restaurant(request, restaurant_id):
     if not request.user.is_authenticated:
         return redirect("table_booker:login")
@@ -23,14 +22,14 @@ def book_restaurant(request, restaurant_id):
     try:    
         restaurant = Restaurant.objects.get(id=restaurant_id)
     except Restaurant.DoesNotExist:
-      restaurant = None    
-    
+      restaurant = None  
+
     if restaurant is None:
-      messages.error(request, "Invalid restaurant supplied")
-      return redirect("table_booker:home")
+        messages.error(request, "Invalid restaurant supplied")
+        return redirect("table_booker:home")
 
     if request.method == "POST":
-        form = BookingForm(request.POST)
+        form = BookingForm(restaurant, request.POST)
 
         if form.is_valid():
             booking = form.save(commit=False)
@@ -40,16 +39,14 @@ def book_restaurant(request, restaurant_id):
             messages.info(request, f"You successfully booked {restaurant}")
             return redirect("table_booker:home")
     else:
-        form = BookingForm()
+        form = BookingForm(restaurant)
 
     return render(
         request=request,
         template_name="book_restaurant.html",
         context={"booking_form": form},
-    )
-  
-    
-    form = BookingForm()
+    ) 
+    form = BookingForm(restaurant)
     return render(
         request=request,
         template_name="book_restaurant.html",

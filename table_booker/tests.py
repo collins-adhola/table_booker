@@ -7,7 +7,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.core.exceptions import ValidationError
 from django.test import TestCase
 
-from .factories import RestaurantFactory, TableFactory, UserFactory
+from .factories import RestaurantFactory, TableFactory, UserFactory, BookingFactory
 from .forms import BookingForm, UserForm
 from .models import Restaurant, Table
 
@@ -191,6 +191,34 @@ class TestBookingRestaurant(TestCase):
         self.assertEqual(list(current_queryset), list(expected_queryset))
 
 
+class MyBookingsTests(TestCase):
+    def setUp(self):
+        self.user1 = UserFactory(username="Jane")
+        self.user2 = UserFactory(username="Bayo")
+        self.booking1 = BookingFactory(user=self.user1)
+        self.booking2 = BookingFactory(user=self.user2)
+        self.url = "/my-bookings"
+
+    def test_authentication(self):
+        response = self.client.get(self.url)
+        self.assertRedirects(response, "/login", status_code=302)
+
+    def test_template_rendered(self):
+        self.client.force_login(self.user1)
+        response = self.client.get(self.url)
+        self.assertTemplateUsed(response, "my_bookings.html")  
+
+    def test_user1_context_data(self):
+        self.client.force_login(self.user1)
+        response = self.client.get(self.url)
+        context = response.context["bookings"]
+        self.assertEqual(list(context), [self.booking1])
+
+    def test_user2_context_data(self):
+        self.client.force_login(self.user2)
+        response = self.client.get(self.url)
+        context = response.context["bookings"]
+        self.assertEqual(list(context), [self.booking2])             
 
     # def test_unsuccessful_post(self):
     #     self.client.force_login(self.user)

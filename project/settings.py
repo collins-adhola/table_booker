@@ -38,17 +38,17 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "table_booker.apps.TableBookerConfig",
-    'django_nose',
+    "django_nose",
 ]
 
 
 # Use nose to run all tests
-TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+TEST_RUNNER = "django_nose.NoseTestSuiteRunner"
 
 # Tell nose to measure coverage on the 'table_booker'
 NOSE_ARGS = [
-    '--with-coverage',
-    '--cover-package=table_booker',
+    "--with-coverage",
+    "--cover-package=table_booker",
 ]
 
 MIDDLEWARE = [
@@ -97,9 +97,6 @@ DATABASES = {
 }
 
 
-
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -109,12 +106,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",},
     {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",},
-    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator", },
+    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",},
 ]
 
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
+
 
 LANGUAGE_CODE = "en-us"
 
@@ -125,9 +123,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-
-
 
 
 # Static files (CSS, JavaScript, Images)

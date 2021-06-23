@@ -218,7 +218,26 @@ class MyBookingsTests(TestCase):
         self.client.force_login(self.user2)
         response = self.client.get(self.url)
         context = response.context["bookings"]
-        self.assertEqual(list(context), [self.booking2])             
+        self.assertEqual(list(context), [self.booking2])     
+
+
+class DeleteMyBookingsTest(TestCase):
+    def setUp(self):
+        self.user = UserFactory(username='james')
+        self.booking = BookingFactory()
+        self.url = f"/delete-booking/{self.booking.id}"
+
+    def test_authentication(self):
+        response = self.client.get(self.url)    
+        self.assertRedirects(response, "/login", status_code=302)
+
+
+
+
+
+
+
+
 
     # def test_unsuccessful_post(self):
     #     self.client.force_login(self.user)

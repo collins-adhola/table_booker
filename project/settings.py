@@ -89,12 +89,16 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
         "NAME": "table_booker_db",
-        "USER": "table_booker_user",
-        "PASSWORD": "r4$AMGexn9a#4mJd",
+        "USER": "table_booker_collins",
+        "PASSWORD": "razia123",
         "HOST": "localhost",
         "PORT": "5432",
     }
 }
+
+
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -105,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",},
     {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",},
-    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",},
+    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator", },
 ]
 
 
@@ -121,6 +125,9 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+
 
 
 # Static files (CSS, JavaScript, Images)

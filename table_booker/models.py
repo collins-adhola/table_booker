@@ -16,8 +16,6 @@ class Restaurant(models.Model):
         return self.name
 
 
-
-
 class Table(models.Model):
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE, related_name="tables")
     name = models.CharField(max_length=250)
@@ -48,7 +46,6 @@ DAYS_OF_WEEK = (
     (6, "Sunday"),
 )
 
-
 class BusinessHour(models.Model):
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
     day = models.IntegerField(choices=DAYS_OF_WEEK)
@@ -66,4 +63,3 @@ class Setting(models.Model):
     max_guest = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
-

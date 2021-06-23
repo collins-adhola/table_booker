@@ -10,7 +10,6 @@ from .models import Booking, Restaurant
 def home_page(request):
     if not request.user.is_authenticated:
         return redirect("table_booker:login")
-
     context = {"restaurants": Restaurant.objects.all()}
     return render(request, "home.html", context=context)
 
@@ -22,7 +21,7 @@ def book_restaurant(request, restaurant_id):
     try:    
         restaurant = Restaurant.objects.get(id=restaurant_id)
     except Restaurant.DoesNotExist:
-      restaurant = None  
+        restaurant = None  
 
     if restaurant is None:
         messages.error(request, "Invalid restaurant supplied")
@@ -53,14 +52,16 @@ def book_restaurant(request, restaurant_id):
         context={"booking_form": form},
     )   
 
+def delete_booking(request, booking_id):
+    if not request.user.is_authenticated:
+        return redirect("table_booker:login")
+        
 def my_bookings(request):
     if not request.user.is_authenticated:
         return redirect("table_booker:login")
 
     context = {"bookings": Booking.objects.filter(user=request.user)}
     return render(request, "my_bookings.html", context=context)    
-   
-
 
 def login_page(request):
     if request.method == "POST":

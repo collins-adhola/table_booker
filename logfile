@@ -67,3 +67,105 @@
 2021-05-31 15:55:55.393 BST [14717] FATAL:  database "test_table_booker_db" does not exist
 2021-05-31 16:00:58.432 BST [15193] FATAL:  database "test_table_booker_db" does not exist
 2021-05-31 16:02:39.092 BST [15498] FATAL:  database "test_table_booker_db" does not exist
+2021-06-01 07:32:45.694 BST [57439] LOG:  received smart shutdown request
+2021-06-01 07:32:45.704 BST [57439] LOG:  background worker "logical replication launcher" (PID 57446) exited with exit code 1
+2021-06-01 07:32:45.704 BST [57441] LOG:  shutting down
+2021-06-01 07:32:45.723 BST [57439] LOG:  database system is shut down
+2021-06-01 11:02:07.148 BST [9211] LOG:  starting PostgreSQL 13.2 on x86_64-apple-darwin20.3.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2021-06-01 11:02:07.151 BST [9211] LOG:  listening on IPv6 address "::1", port 5432
+2021-06-01 11:02:07.151 BST [9211] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-06-01 11:02:07.152 BST [9211] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-06-01 11:02:07.178 BST [9212] LOG:  database system was shut down at 2021-06-01 07:32:45 BST
+2021-06-01 11:02:07.214 BST [9211] LOG:  database system is ready to accept connections
+2021-06-02 00:38:33.732 BST [9211] LOG:  received smart shutdown request
+2021-06-02 00:38:33.735 BST [9211] LOG:  background worker "logical replication launcher" (PID 9218) exited with exit code 1
+2021-06-02 00:38:33.735 BST [9213] LOG:  shutting down
+2021-06-02 00:38:33.749 BST [9211] LOG:  database system is shut down
+2021-06-09 10:23:05.139 BST [33062] LOG:  starting PostgreSQL 13.2 on x86_64-apple-darwin20.3.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2021-06-09 10:23:05.146 BST [33062] LOG:  listening on IPv6 address "::1", port 5432
+2021-06-09 10:23:05.146 BST [33062] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-06-09 10:23:05.148 BST [33062] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-06-09 10:23:05.175 BST [33063] LOG:  database system was shut down at 2021-06-02 00:38:33 BST
+2021-06-09 10:23:05.195 BST [33062] LOG:  database system is ready to accept connections
+2021-06-09 11:37:56.263 BST [38696] FATAL:  lock file "postmaster.pid" already exists
+2021-06-09 11:37:56.263 BST [38696] HINT:  Is another postmaster (PID 33062) running in data directory "/usr/local/var/postgres"?
+2021-06-09 11:43:44.233 BST [39326] FATAL:  lock file "postmaster.pid" already exists
+2021-06-09 11:43:44.233 BST [39326] HINT:  Is another postmaster (PID 33062) running in data directory "/usr/local/var/postgres"?
+2021-06-09 12:39:32.151 BST [47024] FATAL:  database "test_table_booker_db" does not exist
+2021-06-09 12:49:16.912 BST [48175] FATAL:  database "test_table_booker_db" does not exist
+2021-06-09 12:53:58.662 BST [48615] FATAL:  database "test_table_booker_db" does not exist
+2021-06-12 06:24:12.695 BST [33062] LOG:  received smart shutdown request
+2021-06-12 06:24:12.706 BST [33062] LOG:  background worker "logical replication launcher" (PID 33069) exited with exit code 1
+2021-06-12 06:24:12.706 BST [33064] LOG:  shutting down
+2021-06-12 06:24:12.731 BST [33062] LOG:  database system is shut down
+2021-06-18 12:51:52.421 BST [78127] LOG:  starting PostgreSQL 13.3 on x86_64-apple-darwin20.4.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+2021-06-18 12:51:52.427 BST [78127] LOG:  could not bind IPv6 address "::1": Address already in use
+2021-06-18 12:51:52.427 BST [78127] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2021-06-18 12:51:52.427 BST [78127] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2021-06-18 12:51:52.427 BST [78127] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2021-06-18 12:51:52.427 BST [78127] WARNING:  could not create listen socket for "localhost"
+2021-06-18 12:51:52.427 BST [78127] FATAL:  could not create any TCP/IP sockets
+2021-06-18 12:51:52.429 BST [78127] LOG:  database system is shut down
+2021-06-18 22:39:46.416 BST [14529] LOG:  starting PostgreSQL 13.3 on x86_64-apple-darwin20.4.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+2021-06-18 22:39:46.423 BST [14529] LOG:  listening on IPv6 address "::1", port 5432
+2021-06-18 22:39:46.423 BST [14529] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-06-18 22:39:46.424 BST [14529] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-06-18 22:39:46.446 BST [14530] LOG:  database system was interrupted; last known up at 2021-06-15 14:32:51 BST
+2021-06-18 22:39:46.662 BST [14530] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-06-18 22:39:46.673 BST [14530] LOG:  redo starts at 0/350C908
+2021-06-18 22:39:46.674 BST [14530] LOG:  invalid record length at 0/350C9F0: wanted 24, got 0
+2021-06-18 22:39:46.674 BST [14530] LOG:  redo done at 0/350C9B8
+2021-06-18 22:39:46.688 BST [14529] LOG:  database system is ready to accept connections
+2021-06-18 22:46:59.458 BST [14529] LOG:  received smart shutdown request
+2021-06-18 22:46:59.461 BST [14529] LOG:  background worker "logical replication launcher" (PID 14536) exited with exit code 1
+2021-06-18 22:46:59.461 BST [14531] LOG:  shutting down
+2021-06-18 22:46:59.472 BST [14529] LOG:  database system is shut down
+2021-06-20 18:38:43.341 BST [36396] LOG:  starting PostgreSQL 13.3 on x86_64-apple-darwin20.4.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+2021-06-20 18:38:43.345 BST [36396] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-06-20 18:38:43.346 BST [36396] LOG:  listening on IPv6 address "::1", port 5432
+2021-06-20 18:38:43.346 BST [36396] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-06-20 18:38:43.371 BST [36397] LOG:  database system was shut down at 2021-06-18 22:46:59 BST
+2021-06-20 18:38:43.382 BST [36396] LOG:  database system is ready to accept connections
+2021-06-20 18:41:43.439 BST [36396] LOG:  server process (PID 38121) was terminated by signal 9: Killed: 9
+2021-06-20 18:41:43.440 BST [36396] LOG:  terminating any other active server processes
+2021-06-20 18:41:43.441 BST [36401] WARNING:  terminating connection because of crash of another server process
+2021-06-20 18:41:43.441 BST [36401] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-06-20 18:41:43.441 BST [36401] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-06-20 18:41:43.446 BST [36396] LOG:  all server processes terminated; reinitializing
+2021-06-20 18:41:43.460 BST [36396] LOG:  startup process (PID 38122) was terminated by signal 9: Killed: 9
+2021-06-20 18:41:43.460 BST [36396] LOG:  aborting startup due to startup process failure
+2021-06-20 18:41:43.462 BST [36396] LOG:  database system is shut down
+2021-06-20 18:50:57.028 BST [39406] LOG:  starting PostgreSQL 13.3 on x86_64-apple-darwin20.4.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+2021-06-20 18:50:57.031 BST [39406] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-06-20 18:50:57.031 BST [39406] LOG:  listening on IPv6 address "::1", port 5432
+2021-06-20 18:50:57.032 BST [39406] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-06-20 18:50:57.036 BST [39407] LOG:  database system was shut down at 2021-06-20 18:50:29 BST
+2021-06-20 18:50:57.042 BST [39406] LOG:  database system is ready to accept connections
+2021-06-20 18:51:06.461 BST [39437] FATAL:  role "table_booker_user" does not exist
+2021-06-20 18:56:38.277 BST [40308] FATAL:  database "table_booker_db" does not exist
+2021-06-20 19:00:38.922 BST [40876] FATAL:  role "table_booker_user" does not exist
+2021-06-20 19:04:13.299 BST [41365] FATAL:  role "table_booker_user" does not exist
+2021-06-20 19:04:44.390 BST [41438] FATAL:  role "postgres" does not exist
+2021-06-20 19:05:27.159 BST [41567] FATAL:  database "table_booker_db" does not exist
+2021-06-20 19:05:30.526 BST [41572] FATAL:  database "table_booker_db" does not exist
+2021-06-20 19:05:32.824 BST [41580] FATAL:  database "table_booker_db" does not exist
+2021-06-20 19:05:38.782 BST [41592] FATAL:  database "table_booker_db" does not exist
+2021-06-20 19:18:52.911 BST [43476] FATAL:  role "table_booker_user" does not exist
+2021-06-21 00:13:40.085 BST [53357] FATAL:  role "table_booker_user" does not exist
+2021-06-21 00:17:14.268 BST [53828] FATAL:  role "table_booker_user" does not exist
+2021-06-21 10:09:54.140 BST [61250] FATAL:  role "postgres" does not exist
+2021-06-21 10:19:15.236 BST [63731] FATAL:  role "postgres" does not exist
+2021-06-21 10:36:07.774 BST [67642] FATAL:  role "postgres" does not exist
+2021-06-21 10:41:29.987 BST [69345] FATAL:  role "postgres" does not exist
+2021-06-21 10:46:32.576 BST [69983] FATAL:  role "postgres" does not exist
+2021-06-21 11:22:56.398 BST [74704] FATAL:  role "postgres" does not exist
+2021-06-21 11:23:12.358 BST [74736] FATAL:  role "postgres" does not exist
+2021-06-21 11:23:19.260 BST [74757] FATAL:  role "postgres" does not exist
+2021-06-21 12:16:51.035 BST [83722] LOG:  starting PostgreSQL 13.3 on x86_64-apple-darwin20.4.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+2021-06-21 12:16:51.039 BST [83722] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2021-06-21 12:16:51.039 BST [83722] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2021-06-21 12:16:51.039 BST [83722] LOG:  could not bind IPv6 address "::1": Address already in use
+2021-06-21 12:16:51.039 BST [83722] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2021-06-21 12:16:51.039 BST [83722] WARNING:  could not create listen socket for "localhost"
+2021-06-21 12:16:51.039 BST [83722] FATAL:  could not create any TCP/IP sockets
+2021-06-21 12:16:51.040 BST [83722] LOG:  database system is shut down

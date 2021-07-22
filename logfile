@@ -169,3 +169,121 @@
 2021-06-21 12:16:51.039 BST [83722] WARNING:  could not create listen socket for "localhost"
 2021-06-21 12:16:51.039 BST [83722] FATAL:  could not create any TCP/IP sockets
 2021-06-21 12:16:51.040 BST [83722] LOG:  database system is shut down
+2021-07-15 21:31:47.228 BST [63975] LOG:  starting PostgreSQL 13.3 on x86_64-apple-darwin20.4.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+2021-07-15 21:31:47.235 BST [63975] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-07-15 21:31:47.235 BST [63975] LOG:  listening on IPv6 address "::1", port 5432
+2021-07-15 21:31:47.236 BST [63975] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-07-15 21:31:47.247 BST [63981] LOG:  database system was shut down at 2021-06-21 12:16:37 BST
+2021-07-15 21:31:47.257 BST [63975] LOG:  database system is ready to accept connections
+2021-07-15 21:31:53.816 BST [64014] FATAL:  role "table_booker_collins" does not exist
+2021-07-15 21:34:23.067 BST [64756] FATAL:  role "table_booker_collins" does not exist
+2021-07-15 21:41:32.313 BST [66260] FATAL:  role "postgres" does not exist
+2021-07-15 21:41:44.759 BST [66307] FATAL:  role "postgres" does not exist
+2021-07-15 21:42:09.957 BST [66384] FATAL:  role "postgres" does not exist
+2021-07-15 21:42:18.448 BST [66406] FATAL:  role "postgres" does not exist
+2021-07-15 22:00:03.657 BST [73754] FATAL:  database "collins" does not exist
+2021-07-15 22:00:23.737 BST [73940] FATAL:  database "collins" does not exist
+2021-07-15 22:16:02.476 BST [78302] FATAL:  role "postgres" does not exist
+2021-07-15 22:18:32.618 BST [63975] LOG:  received smart shutdown request
+2021-07-15 22:18:32.620 BST [63975] LOG:  background worker "logical replication launcher" (PID 63987) exited with exit code 1
+2021-07-15 22:18:32.620 BST [63982] LOG:  shutting down
+2021-07-15 22:18:32.631 BST [63975] LOG:  database system is shut down
+2021-07-15 22:34:33.316 BST [5422] LOG:  starting PostgreSQL 13.3 on x86_64-apple-darwin20.4.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+2021-07-15 22:34:33.320 BST [5422] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-07-15 22:34:33.320 BST [5422] LOG:  listening on IPv6 address "::1", port 5432
+2021-07-15 22:34:33.321 BST [5422] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-07-15 22:34:33.327 BST [5423] LOG:  database system was shut down at 2021-07-15 22:34:16 BST
+2021-07-15 22:34:33.334 BST [5422] LOG:  database system is ready to accept connections
+2021-07-15 22:34:46.014 BST [5454] FATAL:  role "table_booker_collins" does not exist
+2021-07-15 22:37:04.328 BST [5614] FATAL:  lock file "postmaster.pid" already exists
+2021-07-15 22:37:04.328 BST [5614] HINT:  Is another postmaster (PID 5422) running in data directory "/usr/local/var/postgres"?
+2021-07-15 22:37:31.079 BST [5671] FATAL:  role "postgres" does not exist
+2021-07-15 22:37:44.454 BST [5687] FATAL:  role "postgres" does not exist
+2021-07-15 22:38:00.694 BST [5703] FATAL:  role "postgres" does not exist
+2021-07-15 22:39:37.850 BST [5820] FATAL:  database "collins" does not exist
+2021-07-15 22:40:25.939 BST [5965] FATAL:  role "table_booker_collins" does not exist
+2021-07-15 22:54:11.268 BST [7256] FATAL:  role "table_booker_collins" does not exist
+2021-07-15 23:10:05.397 BST [11695] FATAL:  role "table_booker_collins" does not exist
+2021-07-15 23:13:33.816 BST [11756] ERROR:  syntax error at or near "CREATE" at character 35
+2021-07-15 23:13:33.816 BST [11756] STATEMENT:  CREATE DATABASE table_booker_user
+	CREATE USER table_booker_collins WITH ENCRYPTED PASSWORD 'razia123';
+2021-07-15 23:14:23.932 BST [11756] ERROR:  syntax error at or near "CREATE" at character 35
+2021-07-15 23:14:23.932 BST [11756] STATEMENT:  CREATE DATABASE table_booker_user
+	CREATE USER table_booker_collins WITH ENCRYPTED PASSWORD 'razia123';
+2021-07-15 23:17:56.656 BST [11756] ERROR:  database "table_booker_db" does not exist
+2021-07-15 23:17:56.656 BST [11756] STATEMENT:  GRANT ALL PRIVILEGES ON DATABASE table_booker_db  TO table_booker_collins;
+2021-07-15 23:18:58.732 BST [11756] ERROR:  database "table_booker_" does not exist
+2021-07-15 23:18:58.732 BST [11756] STATEMENT:  GRANT ALL PRIVILEGES ON DATABASE table_booker_  TO table_booker_collins;
+2021-07-15 23:20:30.136 BST [12303] ERROR:  syntax error at or near "table_booker_db" at character 1
+2021-07-15 23:20:30.136 BST [12303] STATEMENT:  table_booker_db
+	CREATE DATABASE table_booker_db;
+2021-07-15 23:20:57.980 BST [12612] ERROR:  database "table_booker_db" already exists
+2021-07-15 23:20:57.980 BST [12612] STATEMENT:  CREATE DATABASE table_booker_db ;
+2021-07-15 23:23:41.149 BST [12612] ERROR:  role "table_booker_collins" already exists
+2021-07-15 23:23:41.149 BST [12612] STATEMENT:  CREATE USER table_booker_collins  WITH ENCRYPTED PASSWORD 'razia123';
+2021-07-15 23:27:17.788 BST [13113] ERROR:  relation "django_session" does not exist at character 109
+2021-07-15 23:27:17.788 BST [13113] STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2021-07-15T22:27:17.771340+00:00'::timestamptz AND "django_session"."session_key" = '73apfjah52k4uw9tpxf7gmgdyspj4y3z') LIMIT 21
+2021-07-15 23:27:17.888 BST [13113] ERROR:  relation "django_session" does not exist at character 109
+2021-07-15 23:27:17.888 BST [13113] STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2021-07-15T22:27:17.885474+00:00'::timestamptz AND "django_session"."session_key" = '73apfjah52k4uw9tpxf7gmgdyspj4y3z') LIMIT 21
+2021-07-15 23:27:17.895 BST [13113] ERROR:  relation "django_session" does not exist at character 109
+2021-07-15 23:27:17.895 BST [13113] STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2021-07-15T22:27:17.893132+00:00'::timestamptz AND "django_session"."session_key" = '73apfjah52k4uw9tpxf7gmgdyspj4y3z') LIMIT 21
+2021-07-15 23:27:18.030 BST [13113] ERROR:  relation "django_session" does not exist at character 109
+2021-07-15 23:27:18.030 BST [13113] STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" LIMIT 21
+2021-07-15 23:27:18.043 BST [13113] ERROR:  relation "django_session" does not exist at character 109
+2021-07-15 23:27:18.043 BST [13113] STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2021-07-15T22:27:17.771340+00:00'::timestamptz AND "django_session"."session_key" = '73apfjah52k4uw9tpxf7gmgdyspj4y3z') LIMIT 21
+2021-07-15 23:27:18.048 BST [13113] ERROR:  relation "django_session" does not exist at character 109
+2021-07-15 23:27:18.048 BST [13113] STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2021-07-15T22:27:17.771340+00:00'::timestamptz AND "django_session"."session_key" = '73apfjah52k4uw9tpxf7gmgdyspj4y3z') LIMIT 21
+2021-07-15 23:27:18.058 BST [13113] ERROR:  relation "django_session" does not exist at character 109
+2021-07-15 23:27:18.058 BST [13113] STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2021-07-15T22:27:17.771340+00:00'::timestamptz AND "django_session"."session_key" = '73apfjah52k4uw9tpxf7gmgdyspj4y3z') LIMIT 21
+2021-07-15 23:27:18.059 BST [13113] ERROR:  relation "django_session" does not exist at character 109
+2021-07-15 23:27:18.059 BST [13113] STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2021-07-15T22:27:17.771340+00:00'::timestamptz AND "django_session"."session_key" = '73apfjah52k4uw9tpxf7gmgdyspj4y3z') LIMIT 21
+2021-07-15 23:27:18.066 BST [13113] ERROR:  relation "django_session" does not exist at character 109
+2021-07-15 23:27:18.066 BST [13113] STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2021-07-15T22:27:18.064516+00:00'::timestamptz AND "django_session"."session_key" = '73apfjah52k4uw9tpxf7gmgdyspj4y3z') LIMIT 21
+2021-07-15 23:27:19.199 BST [13114] ERROR:  relation "django_session" does not exist at character 109
+2021-07-15 23:27:19.199 BST [13114] STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2021-07-15T22:27:19.192326+00:00'::timestamptz AND "django_session"."session_key" = '73apfjah52k4uw9tpxf7gmgdyspj4y3z') LIMIT 21
+2021-07-15 23:27:19.216 BST [13114] ERROR:  relation "django_session" does not exist at character 109
+2021-07-15 23:27:19.216 BST [13114] STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2021-07-15T22:27:19.215024+00:00'::timestamptz AND "django_session"."session_key" = '73apfjah52k4uw9tpxf7gmgdyspj4y3z') LIMIT 21
+2021-07-15 23:27:19.217 BST [13114] ERROR:  relation "django_session" does not exist at character 109
+2021-07-15 23:27:19.217 BST [13114] STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2021-07-15T22:27:19.216631+00:00'::timestamptz AND "django_session"."session_key" = '73apfjah52k4uw9tpxf7gmgdyspj4y3z') LIMIT 21
+2021-07-15 23:27:19.223 BST [13114] ERROR:  relation "django_session" does not exist at character 109
+2021-07-15 23:27:19.223 BST [13114] STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" LIMIT 21
+2021-07-15 23:27:19.224 BST [13114] ERROR:  relation "django_session" does not exist at character 109
+2021-07-15 23:27:19.224 BST [13114] STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2021-07-15T22:27:19.192326+00:00'::timestamptz AND "django_session"."session_key" = '73apfjah52k4uw9tpxf7gmgdyspj4y3z') LIMIT 21
+2021-07-15 23:27:19.225 BST [13114] ERROR:  relation "django_session" does not exist at character 109
+2021-07-15 23:27:19.225 BST [13114] STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2021-07-15T22:27:19.192326+00:00'::timestamptz AND "django_session"."session_key" = '73apfjah52k4uw9tpxf7gmgdyspj4y3z') LIMIT 21
+2021-07-15 23:27:19.225 BST [13114] ERROR:  relation "django_session" does not exist at character 109
+2021-07-15 23:27:19.225 BST [13114] STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2021-07-15T22:27:19.192326+00:00'::timestamptz AND "django_session"."session_key" = '73apfjah52k4uw9tpxf7gmgdyspj4y3z') LIMIT 21
+2021-07-15 23:27:19.226 BST [13114] ERROR:  relation "django_session" does not exist at character 109
+2021-07-15 23:27:19.226 BST [13114] STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2021-07-15T22:27:19.192326+00:00'::timestamptz AND "django_session"."session_key" = '73apfjah52k4uw9tpxf7gmgdyspj4y3z') LIMIT 21
+2021-07-15 23:27:19.229 BST [13114] ERROR:  relation "django_session" does not exist at character 109
+2021-07-15 23:27:19.229 BST [13114] STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2021-07-15T22:27:19.227820+00:00'::timestamptz AND "django_session"."session_key" = '73apfjah52k4uw9tpxf7gmgdyspj4y3z') LIMIT 21
+2021-07-20 19:14:08.576 BST [77403] FATAL:  role "postgres" does not exist
+2021-07-20 19:16:21.597 BST [78336] FATAL:  role "postgres" does not exist
+2021-07-20 19:19:14.080 BST [79011] FATAL:  role "postgres" does not exist
+2021-07-20 19:27:15.388 BST [80312] ERROR:  relation "auth_user" does not exist at character 280
+2021-07-20 19:27:15.388 BST [80312] STATEMENT:  SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'collins' LIMIT 21
+2021-07-20 20:09:06.608 BST [86945] ERROR:  permission denied for table realtors_realtor
+2021-07-20 20:09:06.608 BST [86945] STATEMENT:  SELECT NULL AS "id", NULL AS "name", NULL AS "photo", NULL AS "description", NULL AS "phone", NULL AS "email", NULL AS "is_mvp", NULL AS "hire_date" FROM "public"."realtors_realtor"    LIMIT 1000
+2021-07-20 20:09:17.589 BST [86945] ERROR:  permission denied for table realtors_realtor
+2021-07-20 20:09:17.589 BST [86945] STATEMENT:  SELECT NULL AS "id", NULL AS "name", NULL AS "photo", NULL AS "description", NULL AS "phone", NULL AS "email", NULL AS "is_mvp", NULL AS "hire_date" FROM "public"."realtors_realtor"    LIMIT 1000
+2021-07-20 20:09:18.622 BST [86945] ERROR:  permission denied for table realtors_realtor
+2021-07-20 20:09:18.622 BST [86945] STATEMENT:  SELECT NULL AS "id", NULL AS "name", NULL AS "photo", NULL AS "description", NULL AS "phone", NULL AS "email", NULL AS "is_mvp", NULL AS "hire_date" FROM "public"."realtors_realtor"    LIMIT 1000
+2021-07-20 20:09:19.485 BST [86945] ERROR:  permission denied for table realtors_realtor
+2021-07-20 20:09:19.485 BST [86945] STATEMENT:  SELECT NULL AS "id", NULL AS "name", NULL AS "photo", NULL AS "description", NULL AS "phone", NULL AS "email", NULL AS "is_mvp", NULL AS "hire_date" FROM "public"."realtors_realtor"    LIMIT 1000
+2021-07-20 20:09:20.518 BST [86945] ERROR:  permission denied for table realtors_realtor
+2021-07-20 20:09:20.518 BST [86945] STATEMENT:  SELECT NULL AS "id", NULL AS "name", NULL AS "photo", NULL AS "description", NULL AS "phone", NULL AS "email", NULL AS "is_mvp", NULL AS "hire_date" FROM "public"."realtors_realtor"    LIMIT 1000
+2021-07-20 20:09:21.805 BST [86945] ERROR:  permission denied for table realtors_realtor
+2021-07-20 20:09:21.805 BST [86945] STATEMENT:  SELECT NULL AS "id", NULL AS "name", NULL AS "photo", NULL AS "description", NULL AS "phone", NULL AS "email", NULL AS "is_mvp", NULL AS "hire_date" FROM "public"."realtors_realtor"    LIMIT 1000
+2021-07-20 20:09:55.475 BST [86945] ERROR:  permission denied for table listings_listing
+2021-07-20 20:09:55.475 BST [86945] STATEMENT:  SELECT NULL AS "id", NULL AS "address", NULL AS "city", NULL AS "state", NULL AS "zipcode", NULL AS "description", NULL AS "price", NULL AS "bedrooms", NULL AS "bathrooms", NULL AS "garage", NULL AS "title", NULL AS "sqft", NULL AS "lot_size", NULL AS "photo_main", NULL AS "photo_1", NULL AS "photo_2", NULL AS "photo_3", NULL AS "photo_4", NULL AS "photo_5", NULL AS "photo_6", NULL AS "is_published", NULL AS "list_date", NULL AS "realtor_id" FROM "public"."listings_listing"    LIMIT 1000
+2021-07-20 20:10:00.529 BST [86945] ERROR:  permission denied for table listings_listing
+2021-07-20 20:10:00.529 BST [86945] STATEMENT:  SELECT NULL AS "id", NULL AS "address", NULL AS "city", NULL AS "state", NULL AS "zipcode", NULL AS "description", NULL AS "price", NULL AS "bedrooms", NULL AS "bathrooms", NULL AS "garage", NULL AS "title", NULL AS "sqft", NULL AS "lot_size", NULL AS "photo_main", NULL AS "photo_1", NULL AS "photo_2", NULL AS "photo_3", NULL AS "photo_4", NULL AS "photo_5", NULL AS "photo_6", NULL AS "is_published", NULL AS "list_date", NULL AS "realtor_id" FROM "public"."listings_listing"    LIMIT 1000
+2021-07-22 21:25:31.552 BST [42590] FATAL:  database "test_table_booker_db" does not exist
+2021-07-22 21:39:29.473 BST [43814] FATAL:  database "test_table_booker_db" does not exist
+2021-07-22 22:27:00.873 BST [47830] FATAL:  database "test_table_booker_db" does not exist
+2021-07-22 22:29:31.506 BST [48180] FATAL:  database "test_table_booker_db" does not exist
+2021-07-22 22:40:32.597 BST [49223] FATAL:  database "test_table_booker_db" does not exist
+2021-07-22 22:50:11.604 BST [50376] FATAL:  database "test_table_booker_db" does not exist
+2021-07-22 22:53:18.215 BST [50642] FATAL:  database "test_table_booker_db" does not exist
+2021-07-22 22:55:56.359 BST [50979] FATAL:  database "test_table_booker_db" does not exist
+2021-07-22 23:09:26.077 BST [52186] FATAL:  database "test_table_booker_db" does not exist

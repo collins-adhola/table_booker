@@ -9,7 +9,7 @@ from django.test import TestCase
 
 from .factories import RestaurantFactory, TableFactory, UserFactory, BookingFactory
 from .forms import BookingForm, UserForm
-from .models import Restaurant, Table
+from .models import Restaurant, Table, Booking
 
 
 class HomePageTests(TestCase):
@@ -223,7 +223,7 @@ class MyBookingsTests(TestCase):
 
 class DeleteMyBookingsTest(TestCase):
     def setUp(self):
-        self.user = UserFactory(username='james')
+        self.user = UserFactory(username='kezianne')
         self.booking = BookingFactory()
         self.url = f"/delete-booking/{self.booking.id}"
 
@@ -232,8 +232,31 @@ class DeleteMyBookingsTest(TestCase):
         self.assertRedirects(response, "/login", status_code=302)
 
 
+    def test_booking_exists(self):
+        self.client.force_login(self.user)
+        url = "/delete-booking/123456"  # test with wrong id
+        response = self.client.get(url)
 
+        self.assertEqual(response.status_code, 404)
+    
+    def test_delete_booking_context(self):
+        self.client.force_login(self.user)
+        response = self.client.get(self.url)
+        context = response.context["booking"]
+        self.assertEqual(context, self.booking)
 
+        self.assertEqual(context, self.booking)
+
+        
+
+    def test_successful_delete(self):
+        self.client.force_login(self.user)
+        # performs a delete
+        response = self.client.post(self.url)
+        deleted_booking_queryset = Booking.objects.filter(id=self.booking.id)
+
+        self.assertEqual(list(deleted_booking_queryset), [])
+        self.assertRedirects(response, "/my-bookings", status_code=302)
 
 
 
